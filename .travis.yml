@@ -102,6 +102,7 @@ install:
     # back to cstor for running further tests.
     - cd ..
     - cd cstor
+    - cp -r ../libcstor/cmd/zrepl cmd/
 script:
     # run ztest and test supported zio backends
     - if [ $RUN_UZFS_TESTS = 1 ]; then
@@ -109,6 +110,9 @@ script:
         sudo bash ./print_debug_info.sh &
         sudo bash ../libcstor/tests/cstor/script/test_uzfs.sh -T all || travis_terminate 1;
       fi
+    # go to cstor repo build has been pushed to libcstor repo
+    - cd ..
+    - cd libcstor
     - ./build_image.sh || travis_terminate 1;
     # If this build is running due to travis release tag, then
     # go ahead and tag the dependent repo.
