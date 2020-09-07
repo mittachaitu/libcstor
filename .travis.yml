@@ -102,7 +102,7 @@ install:
     # back to cstor for running further tests.
     - cd ..
     - cd cstor
-    - cp -r ../libcstor/cmd/zrepl cmd/
+    #- cp -r ../libcstor/cmd/zrepl cmd/
 script:
     # run ztest and test supported zio backends
     - if [ $RUN_UZFS_TESTS = 1 ]; then
