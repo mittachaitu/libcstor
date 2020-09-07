@@ -1341,11 +1341,11 @@ sysctl -p
 start_zrepl
 if [ $test_type == "all" ]; then
 	START=$(date +%s.%N)
-	execute_test "pool_test"
-	execute_test "zvol_test"
-	execute_test "rebuild_test"
-	execute_test "zrepl_test"
-	execute_test "zrepl_rebuild_test"
+#	execute_test "pool_test"
+#	execute_test "zvol_test"
+#	execute_test "rebuild_test"
+#	execute_test "zrepl_test"
+#	execute_test "zrepl_rebuild_test"
 	execute_test "fio_test"
 	END=$(date +%s.%N)
 	DIFF=$(echo "scale=0;$END - $START" | bc | awk '{printf "%.1f\n", $0}')
