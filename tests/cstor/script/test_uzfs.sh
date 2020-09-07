@@ -18,11 +18,12 @@ if [ -z $SRC_PATH ]
 then
 	SRC_PATH=`pwd`
 fi
+echo "Source path $SRC_PATH"
 
 ZPOOL="$SRC_PATH/cmd/zpool/zpool"
 ZFS="$SRC_PATH/cmd/zfs/zfs"
 ZDB="$SRC_PATH/cmd/zdb/zdb"
-ZREPL="$SRC_PATH/..libcstor/cmd/zrepl/zrepl"
+ZREPL="$SRC_PATH/../libcstor/cmd/zrepl/zrepl"
 GTEST_UZFS="$SRC_PATH/tests/cstor/gtest/test_uzfs"
 GTEST_ZFS="$SRC_PATH/tests/cstor/gtest/test_zfs"
 GTEST_ZREPL_PROT="$SRC_PATH/tests/cstor/gtest/test_zrepl_prot"
