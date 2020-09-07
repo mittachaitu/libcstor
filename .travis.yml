@@ -76,7 +76,7 @@ install:
     - git clone https://github.com/mittachaitu/zfs.git
     - mv zfs cstor
     - cd cstor
-    - git checkout fix_license
+    - git checkout copy_fix_license
     - git branch
     # Return to libcstor code base
     - popd
