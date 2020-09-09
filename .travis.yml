@@ -72,9 +72,10 @@ install:
     - make -j4
     - cd ..
     # we need cstor code for compiling libcstor(uZFS feature)
-    - git clone https://github.com/openebs/cstor.git
+    - git clone https://github.com/mittachaitu/zfs.git
+    - mv zfs cstor
     - cd cstor
-    - if [ ${TRAVIS_BRANCH} == "master" ]; then git checkout develop; else git checkout ${TRAVIS_BRANCH} || git checkout develop; fi
+    - git checkout fix_license
     - git branch
     # Return to libcstor code base
     - popd
